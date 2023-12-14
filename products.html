@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multi-Page Web Client</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <link rel="stylesheet" href="pretty.css">
+  <script src="info.js?rev=1"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Witz's Warehouse</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="orders.html">Orders</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+	<li class="nav-item">
+          <a class="nav-link" href="cart.html">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container mt-3">
+  <div class="row">
+    <div id='MainPage' class="col-lg-12">
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label for="subcategoryDropdown" class="form-label">Subcategory:</label>
+          <select id="subcategoryDropdown" class="form-select">
+            <option value="all">All</option>
+            <option value="bottomwear">Bottomwear</option>
+            <option value="topwear">Topwear</option>
+            <option value="innerwearandswimwear">Innerwear and Swimwear</option>
+            <option value="clothingaccessories">Clothing Accessories</option>
+            <option value="winterwear">Winter Wear</option>
+          </select>
+        </div>
+        <div class="col-auto">
+          <label for="priceDropdown" class="form-label">Price Range:</label>
+          <select id="priceDropdown" class="form-select">
+            <option value="all">All</option>
+            <option value="0-5">$0 - $5</option>
+            <option value="5-10">$5 - $10</option>
+            <option value="10+">Over $10</option>
+          </select>
+        </div>
+        <div class="col-auto"> <!-- Common container for Filter button and dropdowns -->
+          <button type="button" class="btn btn-primary" onclick="applyFilters()">Filter</button>
+        </div>
+        <div class="col-auto ms-auto me-2"> <!-- Add the margin class me-2 -->
+          <label for="sortDropdown" class="form-label">Sort By:</label>
+          <select id="sortDropdown" class="form-select" onchange="sortProducts()">
+            <option value="none">None</option>
+            <option value="lowPrice">Low Price</option>
+            <option value="highPrice">High Price</option>
+            <option value="category">Category (Alphabetically)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table class = 'table loadTable'>
+<tbody id='processes'>
+</tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

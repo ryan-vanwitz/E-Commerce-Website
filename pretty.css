@@ -1,0 +1,50 @@
+
+ body {
+    border: 2px solid #FFFFFF;
+    padding: 15px; /* Add padding for better appearance */
+    background-color: #0000A0; /* Make the grey background even lighter */
+  }
+
+
+.container {
+  background-color: #FFFFFF; /* White container background color */
+  border-radius: 8px; /* Add some border-radius for a rounded look */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  padding: 20px; /* Add padding inside the container */
+  margin-top: 20px; /* Add some space at the top */
+}
+
+#MainPage {
+    text-align: center;
+    margin: 20px;
+}
+
+.box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #333;
+    color: #fff;
+}
+
+.even-row {
+    background-color: #EEEEEE; /* Set your desired background color */
+}
+
+.odd-row {
+    background-color: #C40000; /* Set your desired background color */
+}
+
